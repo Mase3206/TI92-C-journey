@@ -3,5 +3,8 @@
 	"files.associations": {
 		"*.py": "python",
 		"stdio.h": "c"
-	}
+	},
+	"workbench.productIconTheme": "adwaita",
+	"workbench.colorTheme": "Adwaita Dark & default syntax highlighting & colorful status bar",
+	"workbench.preferredLightColorTheme": "Solarized Light"
 }
