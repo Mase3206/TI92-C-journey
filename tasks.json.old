@@ -1,0 +1,43 @@
+{
+    "tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang build active file",
+			"command": "/usr/bin/clang",
+			"args": [
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/bin/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/clang"
+		},
+		{
+			"type": "shell",
+			"label": "Build and run active file",
+			"command": "${fileDirname}/bin/${fileBasenameNoExtension}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"C/C++: clang build active file"
+			],
+			"detail": "Quickly build and run the current file.",
+			"group": "build"
+		}
+	],
+    "version": "2.0.0"
+}
