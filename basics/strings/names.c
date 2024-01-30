@@ -8,7 +8,7 @@ int main() {
 	char name[100];
 
 	last_name[0] = 'B';
-	sprintf(name, "%s %s", first_name, last_name);
+	snprintf(name, "%s %s", 100, first_name, last_name);
 
 	if (strncmp(name, "John Boe", 100) == 0) {
 		printf("Done!\n");
