@@ -4,7 +4,7 @@ Assuming you now understand pointers and functions, you are aware that function 
 
 Let's say we want to write a function which increments a number by one, called `addone`. This will not work:
 
-```python
+```c
 void addone(int n) {
     // n is local variable which only exists within the function scope
     n++; // therefore incrementing it has no effect
@@ -18,7 +18,7 @@ printf("After: %d\n", n);
 
 However, this will work:
 
-```python
+```c
 void addone(int *n) {
     // n is a pointer here which point to a memory-adress outside the function scope
     (*n)++; // this will effectively increment the value of n
@@ -38,7 +38,7 @@ Notice that when calling the `addone` function, we *must* pass a reference to th
 
 Let's say we want to create a function which moves a point forward in both `x` and `y` directions, called `move`. Instead of sending two pointers, we can now send only one pointer to the function of the point structure:
 
-```python
+```c
 void move(point * p) {
     (*p).x++;
     (*p).y++;
@@ -47,7 +47,7 @@ void move(point * p) {
 
 However, if we wish to dereference a structure and access one of it's internal members, we have a shorthand syntax for that, because this operation is widely used in data structures. We can rewrite this function using the following syntax:
 
-```python
+```c
 void move(point * p) {
     p->x++;
     p->y++;
