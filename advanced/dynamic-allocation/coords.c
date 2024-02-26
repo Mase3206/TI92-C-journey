@@ -7,7 +7,7 @@ typedef struct {
 } point;
 
 int main() {
-	point *mypoint = malloc(sizeof(point));
+	point *mypoint = (point *) malloc(sizeof(point));
 
 	mypoint->x = 10;
 	mypoint->y = 5;
