@@ -180,7 +180,7 @@ int main() {
 
     // TODO: free the top-level pointer
 
-  return 0;
+	return 0;
 }
 ```
 
