@@ -62,7 +62,7 @@ int main() {
 	// Dynamically allocate a new point structure which mypoint points to here
 
 	mypoint->x = 10;
-	mypoint->y =5 ;
+	mypoint->y = 5;
 	printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
 
 	free(mypoint);
